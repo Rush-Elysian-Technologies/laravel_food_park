@@ -16,7 +16,13 @@ class ProfileController extends Controller
 
     function updateProfile( ProfileUpdateRequest $request) :RedirectResponse
     {
-       dd($request->all());
+       $user = Auth::user();
+       $user->name= $request->name;
+       $user->email = $request->email;
+
+       $user->save();
+       toastr('updated Successfully' ,'success');
+       
         
         return redirect()->back();
     }
