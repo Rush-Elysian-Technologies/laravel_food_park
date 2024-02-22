@@ -27,9 +27,17 @@
                     <i class="fas fa-cog"></i> Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item has-icon text-danger">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
+                <!-- Authentication -->
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+
+                    <a href="#"  onclick="event.preventDefault();
+                    this.closest('form').submit();" class="dropdown-item has-icon text-danger">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </form>
+               
             </div>
         </li>
     </ul>
@@ -88,27 +96,27 @@
                     <li><a class="nav-link" href="bootstrap-typography.html">Typography</a></li>
                 </ul>
             </li>
-          
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i>
-                    <span>Components</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="components-article.html">Article</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-avatar.html">Avatar</a></li>
-                    <li><a class="nav-link" href="components-chat-box.html">Chat Box</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-empty-state.html">Empty State</a></li>
-                    <li><a class="nav-link" href="components-gallery.html">Gallery</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-hero.html">Hero</a></li>
-                    <li><a class="nav-link" href="components-multiple-upload.html">Multiple Upload</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-pricing.html">Pricing</a></li>
-                    <li><a class="nav-link" href="components-statistic.html">Statistic</a></li>
-                    <li><a class="nav-link" href="components-tab.html">Tab</a></li>
-                    <li><a class="nav-link" href="components-table.html">Table</a></li>
-                    <li><a class="nav-link" href="components-user.html">User</a></li>
-                    <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
-                </ul>
-       
+
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i>
+                <span>Components</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="components-article.html">Article</a></li>
+                <li><a class="nav-link beep beep-sidebar" href="components-avatar.html">Avatar</a></li>
+                <li><a class="nav-link" href="components-chat-box.html">Chat Box</a></li>
+                <li><a class="nav-link beep beep-sidebar" href="components-empty-state.html">Empty State</a></li>
+                <li><a class="nav-link" href="components-gallery.html">Gallery</a></li>
+                <li><a class="nav-link beep beep-sidebar" href="components-hero.html">Hero</a></li>
+                <li><a class="nav-link" href="components-multiple-upload.html">Multiple Upload</a></li>
+                <li><a class="nav-link beep beep-sidebar" href="components-pricing.html">Pricing</a></li>
+                <li><a class="nav-link" href="components-statistic.html">Statistic</a></li>
+                <li><a class="nav-link" href="components-tab.html">Tab</a></li>
+                <li><a class="nav-link" href="components-table.html">Table</a></li>
+                <li><a class="nav-link" href="components-user.html">User</a></li>
+                <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
+            </ul>
+
         </ul>
 
-       
+
     </aside>
 </div>
