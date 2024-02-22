@@ -16,26 +16,26 @@ class UserSeeder extends Seeder
     {
         User::insert([
             [
-                'name'=>'Admin',
-                'email'=>'admin@gmail.com',
+                'name'=>'Srinivas',
+                'email'=>'srinu@gmail.com',
                 'role'=>'admin',
-                'password'=>Hash::make('12345'),
+                'password'=>Hash::make('98484'),
 
 
             ],
             [
-                'name'=>'User',
-                'email'=>'User@gmail.com',
+                'name'=>'Ramasai',
+                'email'=>'Ramasai@gmail.com',
                 'role'=>'user',
-                'password'=>Hash::make('54321'),
+                'password'=>Hash::make('924643'),
 
 
             ],
             [
-                'name'=>'Ramana',
-                'email'=>'Ramana@gmail.com',
+                'name'=>'Krishna',
+                'email'=>'Krishnasai@gmail.com',
                 'role'=>'user',
-                'password'=>Hash::make('092'),
+                'password'=>Hash::make('636334'),
 
 
             ],
