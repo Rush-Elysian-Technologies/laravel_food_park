@@ -61,7 +61,8 @@
 
 
             <li class="menu-header">Starter</li>
-            <li class="dropdown">
+            <li><a  class="nav-link" href="{{ route('admin.slider.index') }}"><i class="far fa-square" ></i><span>Slider</span></a></li>
+           {{--  <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Layout</span></a>
                 <ul class="dropdown-menu">
@@ -113,7 +114,7 @@
                 <li><a class="nav-link" href="components-table.html">Table</a></li>
                 <li><a class="nav-link" href="components-user.html">User</a></li>
                 <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
-            </ul>
+            </ul> --}}
 
         </ul>
 
