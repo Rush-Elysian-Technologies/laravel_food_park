@@ -4,11 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\DataTables\SliderDataTable;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\SliderCreateRequest;
+use App\Models\Slider;
+use App\Traits\FileUploadTrait;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use View as GlobalView;
 
 class SliderController extends Controller
 {
+    use FileUploadTrait;
     /**
      * Display a listing of the resource.
      */
@@ -28,9 +33,28 @@ class SliderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SliderCreateRequest $request)
     {
-        //
+        /**Handle image upload */
+        $imagePath = $this->uploadImage($request ,'image');
+
+        $slider = new Slider();
+        $slider ->image = $imagePath;
+        $slider ->offer = $request->offer;
+        $slider ->title = $request->title;
+        $slider ->sub_title = $request->sub_title;
+        $slider ->short_description = $request ->short_description;
+        $slider ->button_link = $request->button_link;
+        $slider ->status = $request->status;
+        
+
+        $slider->save();
+
+
+        toastr()->success('created successfully');
+
+        return to_route('admin.slider.index');
+
     }
 
     /**
@@ -44,9 +68,10 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id) : View
     {
-        //
+        $slider = Slider::findorFail($id);
+        return view('admin.slider.edit',compact('slider'));
     }
 
     /**
@@ -54,7 +79,7 @@ class SliderController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        dd($request->all());
     }
 
     /**
