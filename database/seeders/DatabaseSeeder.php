@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
 
          \App\Models\User::factory(3)->create();
+         $this->call(WhyChooseUsSeeder::class);
     }
 }

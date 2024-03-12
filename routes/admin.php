@@ -2,6 +2,7 @@
 use App\Http\Controllers\Admin\AdminDashBoardController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\WhyChooseUsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,6 +18,9 @@ Route::group(['prefix' =>'admin','as'=>'admin.'], function()
     
     /* slider Routes*/
     Route::resource('slider', SliderController::class);
+    
+    /* Why Routes*/
+    Route::resource('why-choose-us', WhyChooseUsController::class);
 });
 
 
